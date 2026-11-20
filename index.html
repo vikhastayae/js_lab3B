@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник пользователей</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <h1>Справочник пользователей</h1>
+        </header>
+
+        <section class="panel" aria-labelledby="users-heading">
+            <div class="section-heading">
+                <div>
+                    <h2 id="users-heading">Пользователи</h2>
+                </div>
+                <button class="button button-load" id="load-users-button" type="button">Загрузить пользователей</button>
+            </div>
+
+            <label for="search-input">Поиск по имени</label>
+            <input id="search-input" type="search" placeholder="Например, Leanne" autocomplete="off">
+
+            <div id="users-list" class="users-list" aria-live="polite">
+                <p class="empty-state">Нажмите кнопку, чтобы загрузить пользователей.</p>
+            </div>
+        </section>
+
+        <section class="panel" aria-labelledby="publications-heading">
+            <h2 id="publications-heading">Публикации пользователя</h2>
+            <div id="publications-list" class="publications-list" aria-live="polite">
+                <p class="empty-state">Выберите пользователя, чтобы показать его публикации.</p>
+            </div>
+        </section>
+
+        <section class="panel messages-panel" aria-labelledby="messages-heading">
+            <h2 id="messages-heading">Сообщения</h2>
+            <div id="messages" class="messages" role="status" aria-live="polite">Здесь появится состояние загрузки или результат запроса.</div>
+        </section>
+    </main>
+</body>
+</html>
