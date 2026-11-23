@@ -47,7 +47,6 @@ function createUserCard(user) {
     button.disabled = isLoading;
 
     button.addEventListener('click', () => loadUserPosts(user));
-
     card.append(name, details, button);
     return card;
 }
